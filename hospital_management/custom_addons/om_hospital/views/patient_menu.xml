@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <menuitem id="hospital_root"
+              name="Hospital"
+              sequence="10"/>
+
+    <menuitem id="hospital_patient_root"
+              name="Patients"
+              parent="hospital_root"
+              sequence="10"/>
+
+    <menuitem id="hospital_patient"
+              name="Details"
+              parent="hospital_patient_root"
+              action="patient_action"
+              sequence="10"/>
+
+
+    <menuitem id="hospital_doctor_root"
+              name="Doctors"
+              parent="hospital_root"
+              sequence="12"/>
+
+    <menuitem id="hospital_doctor"
+              name="Detail"
+              parent="hospital_doctor_root"
+              action="doctor_action"
+              sequence="10"/>
+
+    <menuitem id="hospital_blood_bank_root"
+              name="Blood Bank"
+              parent="hospital_root"
+              sequence="13"/>
+
+    <menuitem id="hospital_blood_bank"
+              name="Group Details"
+              parent="hospital_blood_bank_root"
+              action="blood_bank_action"
+              sequence="13"/>
+
+
+</odoo>

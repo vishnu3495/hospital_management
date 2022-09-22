@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="view_doctor_tree" model="ir.ui.view">
+        <field name="name">hospital.doctors.tree</field>
+        <field name="model">hospital.doctors</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="doctor_name"/>
+                <field name="patient_ids"/>
+                <field name="age"/>
+                <field name="specialise"/>
+<!--                <field name="age"  attrs="{'readonly':[('age','>',30)],'invisible':[('age','>',25)]}"/>-->
+                <field name="place"/>
+<!--                <field name="gender"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_doctor_form" model="ir.ui.view">
+        <field name="name">hospital.doctors.form</field>
+        <field name="model">hospital.doctors</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="doctor_name"/>
+                            <field name="patient_ids"/>
+                            <field name="age"/>
+                            <field name="specialise"/>
+<!--                            <field name="age"   attrs="{'readonly':[('age','=',25)],'invisible':[('age','>',25)]}"/>-->
+                            <field name="place"/>
+<!--                            <field name="gender"/>-->
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+
+
+    <record id="doctor_action" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.doctors</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>
