@@ -40,15 +40,82 @@
         </field>
     </record>
 
+    <record id="view_doctor_kanban" model="ir.ui.view">
+        <field name="name">hospital.doctor.kanban</field>
+        <field name="model">hospital.doctors</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="doctor_name"/>
+                <field name="age"/>
+                <field name="place"/>
+                <field name="specialise"/>
+                <field name="patient_ids"/>
+<!--                <field name="gender"/>-->
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="kanban_details">
+                                <ul>
+                                    <li>
+                                       Doctor :
+                                        <field name="doctor_name"/>
+                                    </li>
+                                    <li>
+                                        Age:
+                                        <field name="age"/>
+                                    </li>
+<!--                                    <li>-->
+<!--                                        Gender:-->
+<!--                                        <field name="gender"/>-->
+<!--                                    </li>-->
+                                    <li>
+                                        Place:
+                                        <field name="place"/>
+                                    </li>
+                                    <li>
+                                        Specialise:
+                                        <field name="specialise"/>
+                                    </li>
+                                    <li>
+                                        Patients:
+                                        <field name="patient_ids"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 
 
+        <record id="view_doctor_search" model="ir.ui.view">
+        <field name="name">hospital.doctor.search</field>
+        <field name="model">hospital.doctors</field>
+        <field name="arch" type="xml">
+            <search string="Doctors">
+                <field name="doctor_name"/>
+                <field name="age"/>
+                <field name="patient_ids"/>
+<!--                <filter string="Male" name="male" domain="[('gender','=','male')]"/>-->
+<!--                <filter string="Female" name="female" domain="[('gender','=','female')]"/>-->
+<!--                <filter string="Others" name="other" domain="[('gender','=','other')]"/>-->
+                <group expand="1" string="Group By">
+                    <filter string="Doctor" name="doctor_name" context="{'group_by':'doctor_name'}"/>
+                    <filter string="Age" name="age" context="{'group_by':'age'}"/>
+                    <filter string="Patient" name="patient_ids" context="{'group_by':'patient_ids'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
 
 
     <record id="doctor_action" model="ir.actions.act_window">
         <field name="name">Doctors</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.doctors</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
 
