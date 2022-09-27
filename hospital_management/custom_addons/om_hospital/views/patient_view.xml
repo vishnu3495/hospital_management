@@ -16,6 +16,7 @@
                 <field name="date"/>
                 <field name="datetime"/>
                 <field name="completed"/>
+                <field name="appointment_count"/>
                 <field name="remarks"/>
 
             </tree>
@@ -27,6 +28,10 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button id="button_submit" name="action_submit" string="Submit" class="btn-success" type="object"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submit"/>
+                </header>
                 <sheet>
                     <group>
                         <group>
@@ -41,6 +46,7 @@
                             <field name="date"/>
                             <field name="datetime"/>
                             <field name="completed"/>
+                            <field name="appointment_count"/>
                             <field name="remarks"/>
                         </group>
                     </group>
@@ -58,12 +64,13 @@
                 <field name="name"/>
                 <field name="age"/>
                 <field name="gender"/>
-                <field name="blood_id" domain="[('blood_group','!=','A+')]"/>
+                <field name="blood_id"/>
                 <field name="doctor_detail_id"/>
                 <field name="doctor_ids"/>
                 <field name="date"/>
                 <field name="datetime"/>
                 <field name="completed"/>
+                <field name="appointment_count"/>
                 <field name="remarks"/>
                 <templates>
                     <t t-name="kanban-box">
@@ -106,7 +113,11 @@
                                         Completed:
                                         <field name="completed"/>
                                     </li>
-                                     <li>
+                                    <li>
+                                        Appointment Count:
+                                        <field name="appointment_count"/>
+                                    </li>
+                                    <li>
                                         Remarks:
                                         <field name="remarks"/>
                                     </li>

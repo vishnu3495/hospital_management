@@ -3,3 +3,4 @@
 from . import patient
 from . import blood_group
 from . import doctors
+from . import appointment

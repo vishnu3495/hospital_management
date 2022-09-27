@@ -40,5 +40,17 @@
               action="blood_bank_action"
               sequence="13"/>
 
+    <menuitem id="hospital_appointment_root"
+              name="Appointment"
+              parent="hospital_root"
+              sequence="14"/>
+
+    <menuitem id="hospital_appointment"
+              name="Book"
+              parent="hospital_appointment_root"
+              action="appointment_action"
+              sequence="15"/>
+
+
 
 </odoo>

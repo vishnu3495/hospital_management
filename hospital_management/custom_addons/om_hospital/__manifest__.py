@@ -14,6 +14,7 @@
         'views/patient_view.xml',
         'views/doctors_view.xml',
         'views/blood_bank_view.xml',
+        'views/appointment.xml',
         'views/patient_menu.xml',
     ],
     'demo': [
