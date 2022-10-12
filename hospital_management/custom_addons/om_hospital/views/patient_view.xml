@@ -7,6 +7,8 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <tree>
+                <!--                <field name="reference" readonly="1"/>-->
+                <field name="ref"/>
                 <field name="name"/>
                 <field name="age"/>
                 <field name="gender"/>
@@ -30,9 +32,17 @@
             <form>
                 <header>
                     <button id="button_submit" name="action_submit" string="Submit" class="btn-success" type="object"/>
+                    <button id="button_create_appointment" name="%(action_create_appointment)d" string="Create Appointment" class="btn-primary" type="action"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,submit"/>
+
                 </header>
                 <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="ref" readonly="1"/>
+                        </h1>
+                    </div>
                     <group>
                         <group>
                             <field name="name"/>
@@ -61,22 +71,23 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <kanban>
+                <field name="ref"/>
                 <field name="name"/>
                 <field name="age"/>
                 <field name="gender"/>
                 <field name="blood_id"/>
-                <field name="doctor_detail_id"/>
-                <field name="doctor_ids"/>
-                <field name="date"/>
-                <field name="datetime"/>
-                <field name="completed"/>
-                <field name="appointment_count"/>
-                <field name="remarks"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="kanban_details">
+                                <div>
+                                    <field name="image" widget="image" class="oe_avatar"/>
+                                </div>
                                 <ul>
+                                    <li>
+                                        Reference:
+                                        <field name="ref"/>
+                                    </li>
                                     <li>
                                         Name:
                                         <field name="name"/>
@@ -93,35 +104,8 @@
                                         BloodGroup:
                                         <field name="blood_id" domain="[('blood_group','!=','A+')]"/>
                                     </li>
-                                    <li>
-                                        Doctor:
-                                        <field name="doctor_detail_id"/>
-                                    </li>
-                                    <li>
-                                        Doctor:
-                                        <field name="doctor_ids" widget="many2many_tags"/>
-                                    </li>
-                                    <li>
-                                        Date:
-                                        <field name="date"/>
-                                    </li>
-                                    <li>
-                                        Date/Time:
-                                        <field name="datetime"/>
-                                    </li>
-                                    <li>
-                                        Completed:
-                                        <field name="completed"/>
-                                    </li>
-                                    <li>
-                                        Appointment Count:
-                                        <field name="appointment_count"/>
-                                    </li>
-                                    <li>
-                                        Remarks:
-                                        <field name="remarks"/>
-                                    </li>
                                 </ul>
+
                             </div>
                         </div>
                     </t>
@@ -129,6 +113,41 @@
             </kanban>
         </field>
     </record>
+
+
+    <record id="view_appointment_pivot" model="ir.ui.view">
+        <field name="name">hospital.appointment.pivot</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <pivot string="Patient Appointment">
+                <field name="name" type="col"/>
+                <field name="doctor_detail_id" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_appointment_calendar" model="ir.ui.view">
+        <field name="name">hospital.appointment.calendar</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <calendar string="Appointment Calendar" date_start="date" color="doctor_ids" mode="month" quick_add="False">
+                <field name="ref"/>
+                <field name="name"/>
+                <field name="doctor_ids"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_appointment_graph" model="ir.ui.view">
+        <field name="name">hospital.appointment.graph</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <graph string="Appointment Graph" type="pie">
+                <field name="gender"/>
+            </graph>
+        </field>
+    </record>
+
 
     <record id="view_patient_search" model="ir.ui.view">
         <field name="name">hospital.patient.search</field>
@@ -152,7 +171,7 @@
         <field name="name">Patients</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.patient</field>
-        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_mode">tree,form,kanban,pivot,calendar,graph</field>
     </record>
 
 

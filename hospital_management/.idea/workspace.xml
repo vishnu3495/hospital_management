@@ -5,13 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3844b3f6-23e5-4590-bc94-52a0ec2cb625" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/data/data.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/models/appointment.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/models/blood_group.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/models/doctors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/report/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/report/patient_card.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/report/patient_card_xls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/report/patient_doctor_xls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/report/report.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/views/appointment.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/views/blood_bank_view.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/views/doctors_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/wizard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/wizard/create_appointment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/wizard/create_appointment_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/README.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/controllers/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/demo/report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/de.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/es.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/fr.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/hr.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/hr_HR.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/it.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/nl_NL.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/pt.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/pt_PT.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/report_xlsx.pot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/sv.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/i18n/tr.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/models/ir_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/readme/CONTRIBUTORS.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/readme/DESCRIPTION.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/readme/INSTALL.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/readme/USAGE.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/report/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/report/report_abstract_xlsx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/report/report_partner_xlsx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/static/description/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/static/description/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/static/src/js/report/action_manager_report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/tests/test_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom_addons/report_xlsx/views/webclient_templates.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hospital_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hospital_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_addons/om_hospital/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_addons/om_hospital/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom_addons/om_hospital/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_addons/om_hospital/__manifest__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom_addons/om_hospital/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_addons/om_hospital/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom_addons/om_hospital/models/patient.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_addons/om_hospital/models/patient.py" afterDir="false" />
@@ -49,10 +94,17 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vishnu/git/traning_aug/student_register.py&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/vishnu/git/traning_aug/hospital_management/custom_addons/om_hospital/report&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.patient">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/custom_addons/om_hospital/report" />
+      <recent name="$PROJECT_DIR$/custom_addons" />
+      <recent name="$PROJECT_DIR$/custom_addons/om_hospital/wizard" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.patient_card_xls">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="hospital_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,8 +147,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="patient_card_xls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="hospital_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/custom_addons/om_hospital/report" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/custom_addons/om_hospital/report/patient_card_xls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.patient_card_xls" />
         <item itemvalue="Python.patient" />
       </list>
     </recent_temporary>
@@ -124,6 +198,13 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>

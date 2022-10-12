@@ -29,7 +29,6 @@
     </record>
 
 
-
     <record id="blood_bank_action" model="ir.actions.act_window">
         <field name="name">bloodbank</field>
         <field name="type">ir.actions.act_window</field>

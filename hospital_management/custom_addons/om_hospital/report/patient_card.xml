@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_patient_card">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <h1 style="text-align:center;color:#26b56e">Doctor Patient Card--
+                    <span t-field="doc.refs"></span>
+                </h1>
+                <img t-att-src="image_data_uri(doc.image)"
+                     t-if="doc.image"
+                     alt="Image is not loading"
+                     height="100" width="100"/>
+
+                <table width="100%" style="width:max-content;border:1px solid back; margin-top:10px;"
+                       class="table">
+                    <thead>
+                        <tr style="text-align:center;border:1px;solid-black">
+                            <th>
+                                <u>DOCTOR</u>
+                            </th>
+                            <th>
+                                <u>AGE</u>
+                            </th>
+                            <th>
+                                <u>PLACE</u>
+                            </th>
+                            <th>
+                                <u>SPECIALISATION</u>
+                            </th>
+                        </tr>
+                        <tr style="text-align:center;border:1px;solid-black;color:#5c5c5c">
+                            <td>
+                                <span t-field="doc.doctor_name"></span>
+                            </td>
+
+                            <td>
+                                <span t-field="doc.age"></span>
+                            </td>
+                            <td>
+                                <span t-field="doc.place"></span>
+                            </td>
+
+                            <td>
+                                <span t-field="doc.specialise"></span>
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+                <u>
+                    <h3 style="color:#941212">PATIENT DETAILS</h3>
+                </u>
+                <table width="100%">
+
+                    <tr style="text-align:center;border:2px;background-color:#941244;solid-black;">
+                        <th>REFERENCE</th>
+                        <th>NAME</th>
+                        <th>AGE</th>
+                        <th>GENDER</th>
+                        <th>BLOOD</th>
+                    </tr>
+
+                    <tr t-foreach='doc.patient_ids' t-as='doc'>
+                        <td>
+                            <span t-field="doc.ref"/>
+                        </td>
+                        <td>
+                            <span t-field="doc.name"/>
+                        </td>
+                        <td>
+                            <span t-field="doc.age"/>
+                        </td>
+                        <td>
+                            <span t-field="doc.gender"/>
+                        </td>
+                        <td>
+                            <span t-field="doc.blood_id"/>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <tr>
+                    <t t-set="val" t-value="doc._get_values_in_report()"/>
+                    <strong>
+                        <t t-esc="val"/>
+                    </strong>
+                </tr>
+            </t>
+        </t>
+    </template>
+
+    <template id="actions_patient_card">
+        <t t-call="om_hospital.report_patient_card"></t>
+    </template>
+</odoo>

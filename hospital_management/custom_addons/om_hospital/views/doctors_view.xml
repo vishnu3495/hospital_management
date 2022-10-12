@@ -24,6 +24,12 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="refs" readonly="1"/>
+                        </h1>
+                    </div>
                     <group>
                         <group>
                             <field name="doctor_name"/>

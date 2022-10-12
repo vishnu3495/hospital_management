@@ -11,26 +11,14 @@ class HospitalAppointment(models.Model):
         [('male', 'Male'),
          ('female', 'Female'),
          ('other','Other')],string="Gender")
-    age=fields.Integer(string="Age")
+    age=fields.Integer(string="Age",copy=False)
     date = fields.Date(string='Date')
     remarks = fields.Text(string='Remarks')
 
+
     @api.onchange('patient_id')
     def onchange_patient_id(self):
-        if self.patient_id:
-            if self.patient_id.gender:
-                self.gender=self.patient_id.gender
-            if self.patient_id.age:
-                self.age=self.patient_id.age
-            if self.patient_id.date:
-                self.date=self.patient_id.date
-            if self.patient_id.remarks:
-                self.remarks=self.patient_id.remarks
-        else:
-            self.gender=''
-            self.age=''
-            self.date=''
-            self.remarks=''
-
-
-
+        self.gender = self.patient_id and self.patient_id.gender or ''
+        self.age = self.patient_id and self.patient_id.age or ''
+        self.date = self.patient_id and self.patient_id.date or ''
+        self.remarks = self.patient_id and self.patient_id.remarks or ''
