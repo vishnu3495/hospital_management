@@ -19,12 +19,6 @@ class HospitalDoctors(models.Model):
 
 # gender = fields.Selection(selection_add=[('other', 'other')])
 
-    # def _get_values_in_report(self):
-    #     current_date=date.today()
-    #     current_datetime=datetime.now()
-    #     dic={'current_date':current_date,'current_datetime':current_datetime}
-    #     return dic
-
 
     def copy(self,default=None):
         if default is None:

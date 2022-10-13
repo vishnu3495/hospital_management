@@ -12,6 +12,7 @@
     'data': [
         'security/ir.model.access.csv',
         'data/data.xml',
+        'data/cron.xml',
         'wizard/create_appointment_view.xml',
         'views/patient_view.xml',
         'views/doctors_view.xml',

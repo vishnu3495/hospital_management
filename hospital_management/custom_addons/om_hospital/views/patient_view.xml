@@ -33,7 +33,7 @@
                 <header>
                     <button id="button_submit" name="action_submit" string="Submit" class="btn-success" type="object"/>
                     <button id="button_create_appointment" name="%(action_create_appointment)d" string="Create Appointment" class="btn-primary" type="action"/>
-                    <field name="state" widget="statusbar" statusbar_visible="draft,submit"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submit,scheduled"/>
 
                 </header>
                 <sheet>

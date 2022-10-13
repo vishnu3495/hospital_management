@@ -30,7 +30,7 @@ class HospitalPatient(models.Model):
     doctor_ids = fields.Many2many('hospital.doctors', 'doctor_patient_rel', 'doctor_id', 'patient_id', string='Doctors')
     doctor_detail_id = fields.Many2one('hospital.doctors', string='Doctors List')
 
-    state = fields.Selection([('draft', 'Draft'), ('submit', 'Submit')], default='draft', string='Status')
+    state = fields.Selection([('draft', 'Draft'), ('submit', 'Submit'),('scheduled','Scheduled')], default='draft', string='Status')
 
     def action_submit(self):
         self.state = 'submit'
@@ -98,5 +98,19 @@ class HospitalPatient(models.Model):
     def _get_values_in_report(self):
         now = datetime.strftime(fields.Datetime.context_timestamp(self, datetime.now()), "%d-%m-%Y %H:%M:%S")
         return now
+
+    @api.model
+    def test_cron_job(self):
+        current_date=date.today()
+        schedule=self.env['hospital.patient'].search([('date', '=', current_date)])
+        for rec in schedule:
+            if rec.date:
+                rec['state']='scheduled'
+        return rec
+
+
+
+
+
 
 

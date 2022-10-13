@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3844b3f6-23e5-4590-bc94-52a0ec2cb625" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/data/cron.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/data/data.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/models/appointment.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/custom_addons/om_hospital/models/blood_group.py" afterDir="false" />
@@ -104,7 +105,7 @@
       <recent name="$PROJECT_DIR$/custom_addons/om_hospital/wizard" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.patient_card_xls">
+  <component name="RunManager" selected="Python.patient">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="hospital_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,8 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.patient_card_xls" />
         <item itemvalue="Python.patient" />
+        <item itemvalue="Python.patient_card_xls" />
       </list>
     </recent_temporary>
   </component>
