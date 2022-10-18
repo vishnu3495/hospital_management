@@ -101,8 +101,7 @@ class HospitalPatient(models.Model):
 
     @api.model
     def test_cron_job(self):
-        current_date=date.today()
-        schedule=self.env['hospital.patient'].search([('date', '=', current_date)])
+        schedule=self.env['hospital.patient'].search([('date', '=', date.today())])
         for rec in schedule:
             if rec.date:
                 rec['state']='scheduled'

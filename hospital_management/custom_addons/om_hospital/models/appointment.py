@@ -22,3 +22,4 @@ class HospitalAppointment(models.Model):
         self.age = self.patient_id and self.patient_id.age or ''
         self.date = self.patient_id and self.patient_id.date or ''
         self.remarks = self.patient_id and self.patient_id.remarks or ''
+

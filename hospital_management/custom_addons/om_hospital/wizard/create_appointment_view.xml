@@ -11,7 +11,7 @@
                     <field name="name"/>
                 </group>
                 <footer>
-                    <button name="action_create" string="Create" class="btn-success" />
+                    <button name="create" string="Create" class="btn-success"/>
                     <button string="Cancel" class="btn-danger" special="cancel"/>
                 </footer>
             </form>

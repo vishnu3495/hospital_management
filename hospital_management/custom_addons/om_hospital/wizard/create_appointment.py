@@ -7,3 +7,6 @@ class CreateAppointmentWizard(models.TransientModel):
     patient_id=fields.Many2one('hospital.patient',string='Patient ID')
     name=fields.Char(string='Name',required=True)
 
+    # @api.model
+    # def create(self, vals):
+    #     return super(CreateAppointmentWizard,self).create(vals)

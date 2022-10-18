@@ -4,3 +4,5 @@ from . import patient
 from . import blood_group
 from . import doctors
 from . import appointment
+from .import sale
+from .import invoice
